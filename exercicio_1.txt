@@ -1,0 +1,23 @@
+create database db_servicoRH;
+
+create table tb_funcionarios(
+id bigint(5) auto_increment,
+nome varchar(20) not null,
+idade int(2) not null,
+salario decimal(10,2),
+primary key(id)
+
+INSERT INTO `db_servicorh`.`tb_funcionarios` (`id`, `nome`, `idade`, `salario`) VALUES ('1', 'Alex', '30', '1500');
+INSERT INTO `db_servicorh`.`tb_funcionarios` (`id`, `nome`, `idade`, `salario`) VALUES ('2', 'Leticia', '28', '1400');
+INSERT INTO `db_servicorh`.`tb_funcionarios` (`id`, `nome`, `idade`, `salario`) VALUES ('3', 'River', '30', '1300');
+INSERT INTO `db_servicorh`.`tb_funcionarios` (`id`, `nome`, `idade`, `salario`) VALUES ('4', 'Dani', '30', '2500');
+INSERT INTO `db_servicorh`.`tb_funcionarios` (`id`, `nome`, `idade`, `salario`) VALUES ('5', 'Larissa', '30', '2500')
+
+select * from tb_funcionarios where salario >2000;
+select *from tb_funcionarios where salario <2000
+
+update tb_funcionarios set nome = "silas" where id=1;
+update tb_funcionarios set salario = "2000" where id=3;
+select * from tb_funcionarios;
+
+);

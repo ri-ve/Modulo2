@@ -1,0 +1,30 @@
+create database db_ecommerce;
+
+use db_ecommerce;
+
+
+create table produtos(
+id bigint (8) auto_increment,
+loja varchar(20)not null,
+preco decimal (10,2),
+marca varchar (20),
+genero enum('m','f'),
+cliente varchar(20),
+idade tinyint(2),
+numero tinyint(2), 
+primary key(id)
+
+);
+
+
+INSERT INTO `produtos` (`loja`, `preco`, `marca`,`genero`,`cliente`,`idade`,`numero`) VALUES ('milgral', '5200','puma','m','River', '26', '38');
+INSERT INTO `produtos` (`loja`, `preco`, `marca`,`genero`,`cliente`,`idade`,`numero`) VALUES ('milgral', '5200','puma','m','River', '26', '38');
+INSERT INTO `produtos` (`loja`, `preco`, `marca`,`genero`,`cliente`,`idade`,`numero`) VALUES ('milgral', '5200','niKE','m','TATI', '27', '28');
+INSERT INTO `produtos` (`loja`, `preco`, `marca`,`genero`,`cliente`,`idade`,`numero`) VALUES ('milgral', '4000','niKE','m','LAIS', '26', '24');
+
+select* from produtos 	where preco> 5000;
+ select* from produtos 	where preco< 5000
+
+update produtos set cliente = "tais" where id=1;
+update produtos set preco = "2000" where id=3;
+select * from produtos;
